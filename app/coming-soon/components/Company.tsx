@@ -10,28 +10,13 @@ interface Props {
 export default function Company({ content }: Props) {
   return (
     <div className="animate-company-reveal w-full max-w-4xl mx-auto relative z-10">
-      <style jsx>{`
-        @keyframes rgb-border {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        .animate-rgb-border {
-          background: linear-gradient(60deg, #ff0000, #00ff00, #0000ff, #ff0000, #00ff00, #0000ff);
-          background-size: 300% 300%;
-          animation: rgb-border 4s ease infinite;
-        }
-      `}</style>
-
       <div className="relative p-[2px] rounded-3xl overflow-hidden animate-rgb-border shadow-2xl">
-        {/* Main Card Content */}
         <div className="bg-white/90 backdrop-blur-2xl rounded-[22px] p-6 md:p-12 relative overflow-hidden h-full">
           
           <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -ml-32 -mb-32 pointer-events-none"></div>
           
           <div className="relative z-10 text-center space-y-8">
-            {/* Header Section */}
             <div className="space-y-4">
               <div className="inline-flex items-center space-x-2 md:space-x-3 bg-slate-50/80 backdrop-blur-sm px-4 py-1.5 md:px-5 md:py-2 rounded-full border border-slate-200 shadow-sm animate-fade-in-down hover:scale-105 transition-transform duration-300">
                 <FontAwesomeIcon icon={faGlobe} className="w-3.5 h-3.5 md:w-4 md:h-4 text-emerald-600 animate-spin-slow" />
@@ -57,7 +42,7 @@ export default function Company({ content }: Props) {
                   <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white shadow-sm flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>
                     <FontAwesomeIcon icon={item.icon} className={`w-6 h-6 md:w-7 md:h-7 ${item.color}`} />
                   </div>
-                  <h4 className="text-base md:text-lg font-bold text-slate-800 mb-1">{item.title}</h4>
+                  <h3 className="text-base md:text-lg font-bold text-slate-800 mb-1">{item.title}</h3>
                   <p className="text-xs md:text-sm text-slate-500">{item.desc}</p>
                 </div>
               ))}
