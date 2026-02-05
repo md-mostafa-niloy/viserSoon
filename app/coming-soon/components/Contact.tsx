@@ -2,12 +2,24 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope, faMapMarkerAlt, faPhone, faQuestionCircle, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 import Link from "next/link"
+import { useState, useEffect } from "react"
 
 interface Props {
   content: any
 }
 
 export default function Contact({ content }: Props) {
+  const [emailHref, setEmailHref] = useState("#")
+  const [emailDisplay, setEmailDisplay] = useState("Loading...")
+
+  useEffect(() => {
+    // Obfuscate email to prevent scraping
+    const user = "support"
+    const domain = "visernic.com"
+    setEmailHref(`mailto:${user}@${domain}`)
+    setEmailDisplay(`${user}@${domain}`)
+  }, [])
+
   return (
     <div className="animate-contact-reveal w-full max-w-4xl mx-auto">
       <style jsx>{`
@@ -46,15 +58,15 @@ export default function Contact({ content }: Props) {
               {
                 icon: faEnvelope,
                 title: content.contact.email.label,
-                value: content.contact.email.value,
-                href: "mailto:support@visernic.com",
+                value: emailDisplay,
+                href: emailHref,
                 delay: "0.1s",
               },
               {
                 icon: faMapMarkerAlt,
                 title: content.contact.office.label,
                 value: content.contact.office.value,
-                href: "https://maps.google.com/?q=Nazipur,Naogaon,6540",
+                href: "https://maps.google.com/?q=Nazipur,Naogaon",
                 delay: "0.2s",
               },
             ].map((item, index) => (
@@ -94,7 +106,7 @@ export default function Contact({ content }: Props) {
 
           <div className="mt-8 md:mt-10 text-center">
             <Link
-              href="mailto:support@visernic.com"
+              href={emailHref}
               className="group inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white px-6 py-3 md:px-8 md:py-3.5 rounded-xl font-bold text-sm md:text-base shadow-lg hover:shadow-emerald-500/30 transform hover:-translate-y-1 transition-all duration-300 overflow-hidden relative"
             >
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-[-15deg]"></div>
