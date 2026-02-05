@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useLayoutEffect } from "react"
 import { content } from "./coming-soon/data"
-import AnimationStyles from "./coming-soon/styles"
 import BackgroundLayers from "./coming-soon/components/BackgroundLayers"
 import Header from "./coming-soon/components/Header"
 import Hero from "./coming-soon/components/Hero"
@@ -34,7 +33,6 @@ export default function ComingSoon() {
   }, [])
 
   useEffect(() => {
-    // Reduced count to fix HTML/Text ratio and Inline Styles warning
     const bgLogos = Array.from({ length: 30 }, (_, i) => ({
       id: i,
       size: Math.random() * 80 + 20,
@@ -48,7 +46,6 @@ export default function ComingSoon() {
     }))
     setBackgroundLogos(bgLogos)
 
-    // Reduced count for better performance and SEO score
     const pLogos = Array.from({ length: 20 }, (_, i) => ({
       id: i + 100,
       size: Math.random() * 30 + 5,
@@ -109,12 +106,7 @@ export default function ComingSoon() {
         Skip to main content
       </a>
 
-      <div 
-        className="absolute inset-0 pointer-events-none z-0 opacity-40 bg-repeat"
-        style={{
-          backgroundImage: 'url("https://www.transparenttextures.com/patterns/cubes.png")',
-        }}
-      />
+      <div className="absolute inset-0 pointer-events-none z-0 opacity-40 bg-texture-pattern" />
 
       <BackgroundLayers backgroundLogos={backgroundLogos} particleLogos={particleLogos} />
 
@@ -133,8 +125,6 @@ export default function ComingSoon() {
 
         <Footer content={currentContent} />
       </div>
-
-      <AnimationStyles />
     </div>
   )
 }
