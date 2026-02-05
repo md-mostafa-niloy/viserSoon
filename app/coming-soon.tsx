@@ -34,7 +34,8 @@ export default function ComingSoon() {
   }, [])
 
   useEffect(() => {
-    const bgLogos = Array.from({ length: 150 }, (_, i) => ({
+    // Reduced count to fix HTML/Text ratio and Inline Styles warning
+    const bgLogos = Array.from({ length: 30 }, (_, i) => ({
       id: i,
       size: Math.random() * 80 + 20,
       left: Math.random() * 100,
@@ -47,7 +48,8 @@ export default function ComingSoon() {
     }))
     setBackgroundLogos(bgLogos)
 
-    const pLogos = Array.from({ length: 80 }, (_, i) => ({
+    // Reduced count for better performance and SEO score
+    const pLogos = Array.from({ length: 20 }, (_, i) => ({
       id: i + 100,
       size: Math.random() * 30 + 5,
       left: Math.random() * 100,
@@ -108,10 +110,9 @@ export default function ComingSoon() {
       </a>
 
       <div 
-        className="absolute inset-0 pointer-events-none z-0 opacity-40"
+        className="absolute inset-0 pointer-events-none z-0 opacity-40 bg-repeat"
         style={{
           backgroundImage: 'url("https://www.transparenttextures.com/patterns/cubes.png")',
-          backgroundRepeat: 'repeat',
         }}
       />
 
