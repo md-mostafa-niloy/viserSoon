@@ -33,7 +33,7 @@ export default function ComingSoon() {
   }, [])
 
   useEffect(() => {
-    const bgLogos = Array.from({ length: 30 }, (_, i) => ({
+    const bgLogos = Array.from({ length: 150 }, (_, i) => ({
       id: i,
       size: Math.random() * 80 + 20,
       left: Math.random() * 100,
@@ -46,7 +46,7 @@ export default function ComingSoon() {
     }))
     setBackgroundLogos(bgLogos)
 
-    const pLogos = Array.from({ length: 20 }, (_, i) => ({
+    const pLogos = Array.from({ length: 80 }, (_, i) => ({
       id: i + 100,
       size: Math.random() * 30 + 5,
       left: Math.random() * 100,
@@ -98,7 +98,6 @@ export default function ComingSoon() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50/20 to-emerald-50 relative overflow-hidden">
-      
       <a 
         href="#main-content" 
         className="absolute top-0 left-0 z-[100] -translate-y-full bg-emerald-600 text-white px-4 py-2 transition-transform focus:translate-y-0"
