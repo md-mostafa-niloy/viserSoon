@@ -33,6 +33,7 @@ export default function ComingSoon() {
   }, [])
 
   useEffect(() => {
+
     const bgLogos = Array.from({ length: 150 }, (_, i) => ({
       id: i,
       size: Math.random() * 80 + 20,
@@ -41,7 +42,7 @@ export default function ComingSoon() {
       animationDuration: Math.random() * 20 + 25,
       animationDelay: Math.random() * 10,
       direction: Math.floor(Math.random() * 8),
-      opacity: Math.random() * 0.15 + 0.05,
+      opacity: Math.random() * 0.15 + 0.05, 
       layer: Math.floor(Math.random() * 3),
     }))
     setBackgroundLogos(bgLogos)
@@ -98,21 +99,21 @@ export default function ComingSoon() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50/20 to-emerald-50 relative overflow-hidden">
-      <a 
-        href="#main-content" 
-        className="absolute top-0 left-0 z-[100] -translate-y-full bg-emerald-600 text-white px-4 py-2 transition-transform focus:translate-y-0"
-      >
-        Skip to main content
-      </a>
-
-      <div className="absolute inset-0 pointer-events-none z-0 opacity-40 bg-texture-pattern" />
+      
+      <div 
+        className="absolute inset-0 pointer-events-none z-0 opacity-40"
+        style={{
+          backgroundImage: 'url("https://www.transparenttextures.com/patterns/cubes.png")',
+          backgroundRepeat: 'repeat',
+        }}
+      />
 
       <BackgroundLayers backgroundLogos={backgroundLogos} particleLogos={particleLogos} />
 
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header content={currentContent} language={language} setLanguage={setLanguage} />
 
-        <main id="main-content" className="flex-1 flex items-center justify-center px-4 py-8 md:py-12">
+        <main className="flex-1 flex items-center justify-center px-4 py-8 md:py-12">
           <div className="w-full max-w-6xl mx-auto text-center space-y-12 md:space-y-16">
             <Hero content={currentContent} />
             <Timer content={currentContent} timeLeft={timeLeft} dailyUpdate={dailyUpdate} />
