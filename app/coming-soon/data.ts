@@ -1,0 +1,193 @@
+export const content = {
+  en: {
+    header: {
+      company: "Visernic Limited",
+      tagline: "Professional Web Solutions",
+      status: "Development Active",
+    },
+    hero: {
+      badge: "Something Amazing is Coming",
+      title: "Coming Soon",
+      subtitle:
+        "We're crafting an exceptional digital experience that will revolutionize how you interact with our services.",
+      description: "Get ready for innovation, excellence, and cutting-edge technology.",
+    },
+    timer: {
+      title: "Launch Countdown",
+      subtitle: "Every second brings us closer to something extraordinary",
+      hours: "Hours",
+      minutes: "Minutes",
+      seconds: "Seconds",
+    },
+    progress: {
+      title: "Development Progress",
+      subtitle: "Website development is in progress",
+      overall: "Overall Progress",
+      features: "Features",
+      uptime: "Uptime",
+    },
+    features: {
+      title: "What's Coming",
+      subtitle: "Exciting features ahead",
+      items: [
+        { text: "Modern UI/UX Design", completed: true },
+        { text: "Mobile Responsive", completed: true },
+        { text: "Advanced Features", completed: false },
+        { text: "Performance Optimization", completed: false },
+      ],
+    },
+    company: {
+      poweredBy: "Powered by",
+      title: "Visernic Limited",
+      description: "Leading the digital transformation with innovative web solutions and cutting-edge technology.",
+      team: {
+        title: "Expert Team",
+        desc: "Professional developers",
+      },
+      quality: {
+        title: "Quality Assured",
+        desc: "Premium standards",
+      },
+      delivery: {
+        title: "Fast Delivery",
+        desc: "On-time completion",
+      },
+      cta: "Visit Our Website",
+    },
+    contact: {
+      title: "Have any question?",
+      subtitle: "Get in touch with our team",
+      phone: {
+        label: "Call us",
+        value: "+447366493955",
+      },
+      email: {
+        label: "Email us",
+        value: "support@visernic.com",
+      },
+      office: {
+        label: "Visit office",
+        value: "Nazipur, Naogaon, 6540",
+      },
+      contactUs: "Contact Us",
+    },
+    footer: {
+      copyright: "© 2024 Visernic Limited. All rights reserved.",
+      tagline1: "Professional Web Development",
+      tagline2: "Innovation & Excellence",
+    },
+    dailyUpdates: [
+      "🚀 Backend development in progress",
+      "🎨 UI/UX design refinements ongoing",
+      "⚡ Performance optimization underway",
+      "🔧 Database architecture implementation",
+      "📱 Mobile responsiveness testing",
+      "🛡️ Security features integration",
+      "🌟 New features being developed",
+      "🔍 Quality assurance testing",
+      "📊 Analytics dashboard creation",
+      "🎯 User experience improvements",
+      "💡 Innovation features planning",
+      "🔄 System integration progress",
+      "📈 Performance metrics optimization",
+      "🎪 Interactive elements development",
+      "🌐 Multi-language support enhancement",
+    ],
+    todayUpdate: "Today's Update:",
+  },
+  bn: {
+    header: {
+      company: "ভিজারনিক লিমিটেড",
+      tagline: "পেশাদার ওয়েব সমাধান",
+      status: "ডেভেলপমেন্ট চলমান",
+    },
+    hero: {
+      badge: "অসাধারণ কিছু আসছে",
+      title: "শীঘ্রই আসছে",
+      subtitle: "আমরা একটি ব্যতিক্রমী ডিজিটাল অভিজ্ঞতা তৈরি করছি যা আমাদের সেবার সাথে আপনার মিথস্ক্রিয়ায় বিপ্লব আনবে।",
+      description: "উদ্ভাবন, উৎকর্ষতা এবং অত্যাধুনিক প্রযুক্তির জন্য প্রস্তুত হন।",
+    },
+    timer: {
+      title: "লঞ্চ কাউন্টডাউন",
+      subtitle: "প্রতিটি সেকেন্ড আমাদের অসাধারণ কিছুর কাছাকাছি নিয়ে যাচ্ছে",
+      hours: "ঘন্টা",
+      minutes: "মিনিট",
+      seconds: "সেকেন্ড",
+    },
+    progress: {
+      title: "ডেভেলপমেন্ট অগ্রগতি",
+      subtitle: "ওয়েবসাইট ডেভেলপমেন্ট কাজ চলছে",
+      overall: "সামগ্রিক অগ্রগতি",
+      features: "ফিচার",
+      uptime: "আপটাইম",
+    },
+    features: {
+      title: "যা আসছে",
+      subtitle: "রোমাঞ্চকর ফিচারসমূহ",
+      items: [
+        { text: "আধুনিক UI/UX ডিজাইন", completed: true },
+        { text: "মোবাইল রেসপন্সিভ", completed: true },
+        { text: "উন্নত ফিচারসমূহ", completed: false },
+        { text: "পারফরম্যান্স অপটিমাইজেশন", completed: false },
+      ],
+    },
+    company: {
+      poweredBy: "চালিত",
+      title: "ভিজারনিক লিমিটেড",
+      description: "উদ্ভাবনী ওয়েব সমাধান এবং অত্যাধুনিক প্রযুক্তির সাথে ডিজিটাল রূপান্তরে নেতৃত্ব দিচ্ছে।",
+      team: {
+        title: "বিশেষজ্ঞ দল",
+        desc: "পেশাদার ডেভেলপার",
+      },
+      quality: {
+        title: "মান নিশ্চিত",
+        desc: "প্রিমিয়াম মানদণ্ড",
+      },
+      delivery: {
+        title: "দ্রুত ডেলিভারি",
+        desc: "সময়মতো সম্পন্ন",
+      },
+      cta: "আমাদের ওয়েবসাইট দেখুন",
+    },
+    contact: {
+      title: "কোন প্রশ্ন আছে?",
+      subtitle: "আমাদের টিমের সাথে যোগাযোগ করুন",
+      phone: {
+        label: "কল করুন",
+        value: "+৪৪৭৩৬৬৪৯৩৯৫৫",
+      },
+      email: {
+        label: "ইমেইল করুন",
+        value: "support@visernic.com",
+      },
+      office: {
+        label: "অফিস দেখুন",
+        value: "নজিপুর, নওগাঁ, ৬৫৪০",
+      },
+      contactUs: "যোগাযোগ করুন",
+    },
+    footer: {
+      copyright: "© ২০২৪ ভিজারনিক লিমিটেড। সকল অধিকার সংরক্ষিত।",
+      tagline1: "পেশাদার ওয়েব ডেভেলপমেন্ট",
+      tagline2: "উদ্ভাবন ও উৎকর্ষতা",
+    },
+    dailyUpdates: [
+      "🚀 ব্যাকএন্ড ডেভেলপমেন্ট চলমান",
+      "🎨 UI/UX ডিজাইন উন্নতি চলছে",
+      "⚡ পারফরম্যান্স অপটিমাইজেশন চলমান",
+      "🔧 ডেটাবেস আর্কিটেকচার বাস্তবায়ন",
+      "📱 মোবাইল রেসপন্সিভনেস টেস্টিং",
+      "🛡️ নিরাপত্তা ফিচার ইন্টিগ্রেশন",
+      "🌟 নতুন ফিচার ডেভেলপমেন্ট",
+      "🔍 কোয়ালিটি অ্যাসিউরেন্স টেস্টিং",
+      "📊 অ্যানালিটিক্স ড্যাশবোর্ড তৈরি",
+      "🎯 ইউজার এক্সপেরিয়েন্স উন্নতি",
+      "💡 ইনোভেশন ফিচার পরিকল্পনা",
+      "🔄 সিস্টেম ইন্টিগ্রেশন অগ্রগতি",
+      "📈 পারফরম্যান্স মেট্রিক্স অপটিমাইজেশন",
+      "🎪 ইন্টারঅ্যাক্টিভ এলিমেন্ট ডেভেলপমেন্ট",
+      "🌐 মাল্টি-ল্যাঙ্গুয়েজ সাপোর্ট উন্নতি",
+    ],
+    todayUpdate: "আজকের আপডেট:",
+  },
+}
