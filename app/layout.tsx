@@ -121,8 +121,7 @@ export default function RootLayout({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+447366493955",
-      "contactType": "customer service",
-      "email": "support@visernic.com"
+      "contactType": "customer service"
     },
     "sameAs": [
       "https://twitter.com/visernic",
