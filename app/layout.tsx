@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import { Analytics } from "@vercel/analytics/react"
 import './globals.css'
 
 const geist = Geist({ subsets: ["latin"] })
@@ -82,6 +83,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://visernic.com',
   },
+  other: {
+    "DC.title": "Visernic Limited - Professional Web Solutions & Software Development",
+    "DC.creator": "Visernic Limited",
+    "DC.description": "Visernic Limited offers cutting-edge web development, software solutions, and IT services.",
+    "DC.publisher": "Visernic Limited",
+    "DC.date": "2024-02-05",
+    "DC.type": "Text",
+    "DC.format": "text/html",
+    "DC.identifier": "https://visernic.com",
+    "DC.language": "en",
+    "DC.coverage": "World",
+    "DC.rights": "© 2024 Visernic Limited",
+  },
 }
 
 export default function RootLayout({
@@ -89,10 +103,42 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Visernic Limited",
+    "url": "https://visernic.com",
+    "logo": "https://visernic.com/visernic-logo.png",
+    "description": "Professional Web Solutions & Software Development Company",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nazipur",
+      "addressRegion": "Naogaon",
+      "postalCode": "6540",
+      "addressCountry": "BD"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+447366493955",
+      "contactType": "customer service",
+      "email": "support@visernic.com"
+    },
+    "sameAs": [
+      "https://twitter.com/visernic",
+      "https://facebook.com/visernic",
+      "https://linkedin.com/company/visernic"
+    ]
+  }
+
   return (
     <html lang="en">
       <body className={`${geist.className} ${geistMono.className} font-sans antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
+        <Analytics />
       </body>
     </html>
   )
