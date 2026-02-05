@@ -10,7 +10,7 @@ interface Props {
 export default function Company({ content }: Props) {
   return (
     <div className="animate-company-reveal w-full max-w-4xl mx-auto relative z-10">
-      <div className="relative p-[2px] rounded-3xl overflow-hidden animate-rgb-border shadow-2xl">
+      <div className="relative p-[2px] rounded-3xl overflow-hidden shadow-2xl">
         <div className="bg-white/90 backdrop-blur-2xl rounded-[22px] p-6 md:p-12 relative overflow-hidden h-full">
           
           <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none"></div>
