@@ -9,29 +9,14 @@ interface Props {
 }
 
 export default function Contact({ content }: Props) {
-  const [emailHref, setEmailHref] = useState("")
-  const [emailDisplay, setEmailDisplay] = useState("")
+  const [email, setEmail] = useState("")
 
   useEffect(() => {
-    const u = "support"
-    const d = "visernic.com"
-    setEmailHref(`mailto:${u}@${d}`)
-    setEmailDisplay(`${u}@${d}`)
+    setEmail("support@visernic.com")
   }, [])
 
   return (
     <div className="animate-contact-reveal w-full max-w-4xl mx-auto">
-      <style jsx>{`
-        @keyframes rgb-border-flow {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        .group:hover .rgb-border {
-          opacity: 1;
-        }
-      `}</style>
-
       <div className="bg-white/80 backdrop-blur-2xl rounded-2xl md:rounded-3xl p-6 md:p-10 shadow-2xl border border-emerald-100/50 relative overflow-hidden transition-all duration-500 hover:shadow-emerald-500/10">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 via-transparent to-emerald-50/30 pointer-events-none"></div>
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 via-green-500 to-emerald-600"></div>
@@ -57,8 +42,8 @@ export default function Contact({ content }: Props) {
               {
                 icon: faEnvelope,
                 title: content.contact.email.label,
-                value: emailDisplay || content.contact.email.value,
-                href: emailHref || "#",
+                value: email || "Loading...",
+                href: email ? `mailto:${email}` : "#",
                 delay: "0.1s",
               },
               {
@@ -70,8 +55,6 @@ export default function Contact({ content }: Props) {
               },
             ].map((item, index) => (
               <div key={index} className="group relative h-full animate-contact-card" style={{ animationDelay: item.delay }}>
-                <div className="absolute -inset-[1px] bg-gradient-to-r from-red-500 via-green-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm rgb-border" style={{ backgroundSize: '200% 200%', animation: 'rgb-border-flow 3s linear infinite' }}></div>
-                
                 <Link
                   href={item.href}
                   target={item.icon === faMapMarkerAlt ? "_blank" : undefined}
@@ -105,7 +88,7 @@ export default function Contact({ content }: Props) {
 
           <div className="mt-8 md:mt-10 text-center">
             <Link
-              href={emailHref || "#"}
+              href={email ? `mailto:${email}` : "#"}
               className="group inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white px-6 py-3 md:px-8 md:py-3.5 rounded-xl font-bold text-sm md:text-base shadow-lg hover:shadow-emerald-500/30 transform hover:-translate-y-1 transition-all duration-300 overflow-hidden relative"
             >
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-[-15deg]"></div>
